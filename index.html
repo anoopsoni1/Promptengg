@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WebCraft Studio — Demo</title>
+  <meta name="description" content="WebCraft Studio — Clean responsive demo page generated with Tailwind CSS" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#7c3aed',
+              500: '#6d28d9',
+              600: '#5b21b6',
+              700: '#4c1d95',
+              800: '#3b1366',
+              900: '#2b0a3b'
+            },
+            accent: {
+              500: '#06b6d4'
+            }
+          },
+          boxShadow: {
+            'card': '0 6px 18px rgba(22, 22, 22, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+
+  <style>
+    :root { --brand: #6d28d9; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/60 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+   
+        <div class="flex items-center gap-3">
+          <a href="#" class="inline-flex items-center gap-2">
+            <span class="inline-flex w-9 h-9 items-center justify-center rounded-lg" style="background: linear-gradient(135deg,#7c3aed,#06b6d4);">
+         
+              <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5 text-white" aria-hidden="true">
+                <path d="M3 12c0-4.418 3.582-8 8-8 4.418 0 8 3.582 8 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                <path d="M21 12c0 4.418-3.582 8-8 8-4.418 0-8-3.582-8-8" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+              </svg>
+            </span>
+            <span class="font-semibold text-lg">WebCraft Studio</span>
+          </a>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#home" class="text-sm font-medium hover:text-primary-600 transition">Home</a>
+          <a href="#services" class="text-sm font-medium hover:text-primary-600 transition">Services</a>
+          <a href="#about" class="text-sm font-medium hover:text-primary-600 transition">About</a>
+          <a href="#contact" class="text-sm font-medium hover:text-primary-600 transition">Contact</a>
+        </nav>
+
+ 
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-md text-white bg-gradient-to-r from-primary-600 to-accent-500 shadow hover:opacity-95 transition text-sm font-medium">Get Started</a>
+        </div>
+
+     
+        <div class="md:hidden">
+          <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary-300">
+            <span class="sr-only">Open menu</span>
+       
+            <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+            </svg>
+        
+            <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-100">
+      <div class="px-4 pt-4 pb-6 space-y-3">
+        <a href="#home" class="block text-base font-medium">Home</a>
+        <a href="#services" class="block text-base font-medium">Services</a>
+        <a href="#about" class="block text-base font-medium">About</a>
+        <a href="#contact" class="block text-base font-medium">Contact</a>
+        <a href="#contact" class="block mt-2 w-full text-center rounded-md px-3 py-2 bg-primary-600 text-white font-medium">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+ 
+  <main id="home" class="pt-12">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div class="space-y-6">
+          <p class="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-sm font-medium text-primary-600 w-max">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 10a8 8 0 1016 0A8 8 0 002 10z"/></svg>
+            Design · Build · Scale
+          </p>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+            Build Better Web Experiences
+          </h1>
+
+          <p class="text-slate-600 max-w-xl">
+            High-quality modern web design crafted for performance and beauty. We focus on delightful UI, fast performance and accessibility to build products people love.
+          </p>
+
+          <div class="flex flex-wrap gap-3 items-center">
+            <a href="#contact" class="inline-flex items-center px-5 py-3 rounded-md bg-primary-600 text-white font-semibold shadow hover:opacity-95 transition">
+              Get Started
+            </a>
+            <a href="#services" class="inline-flex items-center px-4 py-3 rounded-md border border-slate-200 text-sm font-medium hover:bg-slate-50 transition">
+              Our Services
+            </a>
+          </div>
+
+          <div class="flex gap-6 mt-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold">120+</div>
+              <div class="text-sm text-slate-500">Projects</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold">10k+</div>
+              <div class="text-sm text-slate-500">Hours</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold">4.9/5</div>
+              <div class="text-sm text-slate-500">Avg Rating</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="order-first lg:order-last">
+          <div class="rounded-2xl p-6 bg-gradient-to-br from-slate-50 to-white shadow-card">
+            <img src="https://images.unsplash.com/photo-1526378720709-4b15c6a3f6ad?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=123456" alt="Team working on design" class="w-full rounded-lg object-cover shadow-sm" />
+       
+            <p class="mt-4 text-sm text-slate-500">Collaborative design and engineering sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="services" class="mt-20 bg-slate-50 py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-2xl font-semibold">Our Services</h2>
+          <p class="mt-2 text-slate-600">We deliver high-impact digital solutions, tailored to help your business grow.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+     
+          <article class="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-50 text-primary-600 mb-4">
+
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6L2 12l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold">Web Development</h3>
+            <p class="mt-2 text-sm text-slate-600">Modern, maintainable frontend and backend using best practices, performance-first.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center text-sm font-medium text-primary-600 hover:underline">Talk to us →</a>
+          </article>
+
+          <article class="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-50 text-primary-600 mb-4">
+  
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21v-3L14.06 6.94a2 2 0 012.83 0l2.17 2.17a2 2 0 010 2.83L8 21H3z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold">UI / UX Design</h3>
+            <p class="mt-2 text-sm text-slate-600">User-centered interfaces, high-fidelity prototypes, and design systems for scale.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center text-sm font-medium text-primary-600 hover:underline">See portfolio →</a>
+          </article>
+
+ 
+          <article class="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-50 text-primary-600 mb-4">
+
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 3v18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 13v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 10v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold">SEO & Growth</h3>
+            <p class="mt-2 text-sm text-slate-600">Technical SEO, analytics, and CRO improvements to boost traffic and conversions.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center text-sm font-medium text-primary-600 hover:underline">Improve ranking →</a>
+          </article>
+
+
+          <article class="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-50 text-primary-600 mb-4">
+        
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 17.58A5 5 0 0016 9H15.26A8 8 0 104 16.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold">Cloud & DevOps</h3>
+            <p class="mt-2 text-sm text-slate-600">Infrastructure-as-code, CI/CD, containerization and simplified deployment pipelines.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center text-sm font-medium text-primary-600 hover:underline">Deploy confidently →</a>
+          </article>
+
+  
+          <article class="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-50 text-primary-600 mb-4">
+   
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.58 9.74-7 11-3.42-1.26-7-6-7-11V6l7-3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold">Security & Audit</h3>
+            <p class="mt-2 text-sm text-slate-600">Security assessments, audits, and remediation plans to keep your users safe.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center text-sm font-medium text-primary-600 hover:underline">Secure now →</a>
+          </article>
+
+          <article class="bg-white rounded-2xl p-6 shadow-card hover:shadow-lg transition">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-50 text-primary-600 mb-4">
+      
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 8a6 6 0 10-8.33 5.48L8 20l6.52-1.67A6 6 0 1018 8z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold">Support & Maintenance</h3>
+            <p class="mt-2 text-sm text-slate-600">Ongoing product support, feature improvements and uptime monitoring.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center text-sm font-medium text-primary-600 hover:underline">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="about" class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl bg-gradient-to-r from-white to-slate-50 p-8 shadow-card flex flex-col md:flex-row gap-6 items-center">
+        <div class="flex-1">
+          <h3 class="text-xl font-semibold">We partner with teams to ship great products</h3>
+          <p class="mt-2 text-slate-600">From discovery to production, we help teams create delightful experiences that scale — design systems, frontend engineering, and performance optimizations.</p>
+        </div>
+        <div class="flex-shrink-0">
+          <a href="#services" class="inline-flex items-center px-4 py-2 rounded-md border border-slate-200 font-medium hover:bg-slate-50">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+  
+    <section id="contact" class="mt-20 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+        <div class="bg-white rounded-2xl p-8 shadow-card">
+          <h3 class="text-2xl font-semibold">Get in Touch</h3>
+          <p class="mt-2 text-slate-600">Tell us a little about your project and we'll get back within 1 business day.</p>
+
+          <form id="contact-form" class="mt-6 space-y-4" novalidate>
+      
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-700">Name <span class="text-red-500">*</span></label>
+              <input id="name" name="name" required type="text" class="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-200" placeholder="Your full name" />
+              <p id="name-error" class="mt-1 text-xs text-red-500 hidden">Please enter your name.</p>
+            </div>
+
+ 
+            <div>
+              <label for="email" class="block text-sm font-medium text-slate-700">Email <span class="text-red-500">*</span></label>
+              <input id="email" name="email" required type="email" class="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-200" placeholder="you@company.com" />
+              <p id="email-error" class="mt-1 text-xs text-red-500 hidden">Please provide a valid email.</p>
+            </div>
+
+  
+            <div>
+              <label for="message" class="block text-sm font-medium text-slate-700">Message</label>
+              <textarea id="message" name="message" rows="5" class="mt-1 block w-full rounded-lg border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-200" placeholder="Describe your project or question"></textarea>
+            </div>
+
+            <div class="flex items-center gap-2 text-sm">
+              <input id="consent" name="consent" type="checkbox" class="rounded border-slate-200" />
+              <label for="consent" class="text-slate-600">I agree to be contacted about my inquiry.</label>
+            </div>
+
+     
+            <div>
+              <button type="submit" class="w-full inline-flex justify-center items-center px-4 py-3 rounded-md bg-primary-600 text-white font-semibold shadow hover:opacity-95 transition">Send Message</button>
+            </div>
+
+            <p id="form-success" class="mt-2 text-sm text-green-600 hidden">Thanks — your message has been received. We'll be in touch soon.</p>
+            <p id="form-failure" class="mt-2 text-sm text-red-600 hidden">Something went wrong. Please try again later.</p>
+          </form>
+        </div>
+
+    
+        <div class="space-y-6">
+          <div class="rounded-2xl p-6 bg-gradient-to-br from-slate-50 to-white shadow-card">
+            <h4 class="font-semibold">Contact Info</h4>
+            <p class="mt-2 text-sm text-slate-600">Email: <a href="mailto:hello@webcraft.studio" class="text-primary-600 hover:underline">hello@webcraft.studio</a></p>
+            <p class="text-sm text-slate-600">Phone: <a href="tel:+911234567890" class="text-primary-600 hover:underline">+91 12345 67890</a></p>
+            <p class="text-sm text-slate-600 mt-2">Location: Bhopal, India</p>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-card">
+       
+            <img src="https://images.unsplash.com/photo-1542317854-76d2e9e6f6d8?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef" alt="Map placeholder" class="w-full object-cover h-48" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="bg-slate-900 text-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <a href="#" class="inline-flex items-center gap-3">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-lg" style="background: linear-gradient(135deg,#7c3aed,#06b6d4);">
+              <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5 text-white" aria-hidden="true">
+                <path d="M3 12c0-4.418 3.582-8 8-8 4.418 0 8 3.582 8 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+                <path d="M21 12c0 4.418-3.582 8-8 8-4.418 0-8-3.582-8-8" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+              </svg>
+            </span>
+            <span class="text-white font-semibold">WebCraft Studio</span>
+          </a>
+          <p class="mt-3 text-sm text-slate-300 max-w-xs">We build performant websites and delightful interfaces. Let’s create something great together.</p>
+        </div>
+
+        <div class="md:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div>
+            <h5 class="font-semibold text-sm text-slate-300">Product</h5>
+            <ul class="mt-3 space-y-2 text-sm text-slate-400">
+              <li><a href="#" class="hover:text-white">Features</a></li>
+              <li><a href="#" class="hover:text-white">Pricing</a></li>
+              <li><a href="#" class="hover:text-white">Changelog</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold text-sm text-slate-300">Company</h5>
+            <ul class="mt-3 space-y-2 text-sm text-slate-400">
+              <li><a href="#" class="hover:text-white">About</a></li>
+              <li><a href="#" class="hover:text-white">Careers</a></li>
+              <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold text-sm text-slate-300">Resources</h5>
+            <ul class="mt-3 space-y-2 text-sm text-slate-400">
+              <li><a href="#" class="hover:text-white">Docs</a></li>
+              <li><a href="#" class="hover:text-white">Blog</a></li>
+              <li><a href="#" class="hover:text-white">Support</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold text-sm text-slate-300">Legal</h5>
+            <ul class="mt-3 space-y-2 text-sm text-slate-400">
+              <li><a href="#" class="hover:text-white">Privacy</a></li>
+              <li><a href="#" class="hover:text-white">Terms</a></li>
+              <li><a href="#" class="hover:text-white">SLA</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-400">© <span id="current-year"></span> WebCraft Studio. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+
+          <a href="#" class="p-2 rounded-md hover:bg-slate-800" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-300" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7.5v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="p-2 rounded-md hover:bg-slate-800" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-300" aria-hidden="true"><path d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="p-2 rounded-md hover:bg-slate-800" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-300" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+ 
+    (function () {
+      const btn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('menu-open-icon');
+      const closeIcon = document.getElementById('menu-close-icon');
+
+      btn?.addEventListener('click', function () {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    })();
+
+    (function () {
+      const form = document.getElementById('contact-form');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+      const consent = document.getElementById('consent');
+
+      const nameError = document.getElementById('name-error');
+      const emailError = document.getElementById('email-error');
+      const formSuccess = document.getElementById('form-success');
+      const formFailure = document.getElementById('form-failure');
+
+      function validateEmail(email) {
+        
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      form?.addEventListener('submit', function (e) {
+        e.preventDefault();
+       
+        nameError.classList.add('hidden');
+        emailError.classList.add('hidden');
+        formSuccess.classList.add('hidden');
+        formFailure.classList.add('hidden');
+
+        let valid = true;
+        if (!nameInput.value.trim()) {
+          nameError.classList.remove('hidden');
+          valid = false;
+        }
+
+        if (!validateEmail(emailInput.value.trim())) {
+          emailError.classList.remove('hidden');
+          valid = false;
+        }
+
+        if (!consent.checked) {
+
+          alert('Please agree to be contacted about your inquiry.');
+          valid = false;
+        }
+
+        if (!valid) return;
+
+    
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-70');
+
+        setTimeout(() => {
+       
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-70');
+          form.reset();
+          formSuccess.classList.remove('hidden');
+
+       
+          setTimeout(() => formSuccess.classList.add('hidden'), 6000);
+        }, 900);
+      });
+    })();
+
+ 
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
